@@ -8,7 +8,6 @@ var resur = function(nums, left, right) {
   }
   const mid = Math.floor((left + right) / 2)
   const root = new TreeNode(nums[mid])
-  console.log('root', root)
   root.left = resur(nums, left, mid - 1)
   root.right = resur(nums, mid + 1, right)
   return root

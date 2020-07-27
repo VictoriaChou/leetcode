@@ -1,5 +1,10 @@
 /**
- * @param {number[][]} dungeon
+ * https://leetcode-cn.com/problems/dungeon-game
+ * solution: 反向动态规划，正向动态规划不具备【无后效性】，
+ * 既需要保证从出发点到当前点路径的和最大
+ * 又需要考虑初始值最小
+ * 使用反向动态规划，不需要考虑当前路径和，只需要保证初始值最小即可
+ * @param {*} dungeon 
  * @return {number}
  */
 var calculateMinimumHP = function (dungeon) {
@@ -27,4 +32,3 @@ var calculateMinimumHP = function (dungeon) {
   }
   return dp[0][0]
 }
-console.log(calculateMinimumHP([[-2, -3, 3], [-5, -10, 1], [10, 30, -5]]))
